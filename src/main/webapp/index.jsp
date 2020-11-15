@@ -1,33 +1,24 @@
-<%@ page import="java.util.Date" %><%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2020/10/23
-  Time: 15:39
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>主页(Main.jsp)</title>
 </head>
 <body>
-<h1>
-    hello
-</h1>
+<%--<%@ include file="header.jsp"%>--%>
 
-<%!
-    String i ="world";
-%>
+<jsp:include page="header.jsp" flush="true" />
 
-<%
-    out.print("hello " + i);
-%>
+<div style="text-align: center;">
+    <p>这是Main.jsp页面的内容~</p>
+    <p>include指令用于在编译阶段包括一个文件。这个指令告诉容器在编译阶段将其他外部文件的内容合并到当前JSP文件中。可在JSP页面的任何位置使用 include指令进行编码。</p>
 
-<p>
-当前时间: <%
-        out.print(new Date().toLocaleString());
+</div>
 
-        %>
-<jsp:forward page="header.jsp" />
+<jsp:include page="footer.jsp" flush="true" />
+<%--<%@ include file="footer.jsp"%>--%>
+
 </body>
 </html>

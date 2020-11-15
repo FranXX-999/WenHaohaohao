@@ -20,6 +20,12 @@
         <input type="password" name="password" required  placeholder="密码" class="layui-input">
       </label>
     </div>
+    <%String result=(String)request.getAttribute("result");
+      if (result==null){
+        result="";
+      }
+    %>
+    <%=result%>
     <div class="layui-input-inline login-btn">
       <button class="layui-btn">登录</button>
     </div>

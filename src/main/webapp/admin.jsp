@@ -1,18 +1,14 @@
 <%--
   Created by IntelliJ IDEA.
-  User: Administrator
+  User: 13602
   Date: 2020/11/13
-  Time: 16:35
+  Time: 16:54
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" autoFlush="true" pageEncoding="utf-8" %>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Title</title>
-</head>
-<body>
-<!DOCTYPE html>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>layout 后台大布局 - Layui</title>
@@ -40,7 +36,8 @@
             <li class="layui-nav-item">
                 <a href="javascript:;">
                     <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
-                    贤心
+                    <%String name = (String)request.getAttribute("name");%>
+                    <%=name%>
                 </a>
                 <dl class="layui-nav-child">
                     <dd><a href="">基本资料</a></dd>
@@ -98,4 +95,3 @@
 </script>
 </body>
 </html>
-
